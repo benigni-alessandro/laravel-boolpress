@@ -5,8 +5,8 @@
       <div class="col-md-12 justify-content-center" style="display: flex">
       </div>
       @foreach($posts as $post)
-      <a href="{{route('posts.show', ['slug'=>$post->slug])}}">
         <div class="col-md-3">
+            <a href="{{route('posts.show', ['slug'=>$post->slug])}}">
             <div class="card">
                 <div class="card-header">{{ $post->title }}</div>
                 <div class="card-body">
