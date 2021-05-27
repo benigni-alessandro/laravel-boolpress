@@ -34,6 +34,18 @@
               <small class="text-danger">{{ $message }}</small>
             @enderror
           </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Category</label>
+            <select type="text" class="form-control @error('category') is-invalid @enderror" id="title" name="category_id">
+              <option value="">Select</option>
+              @foreach($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+              @endforeach
+            </select>
+            @error('title')
+              <small class="text-danger">{{ $message }}</small>
+            @enderror
+          </div>
           <button type="submit" name="button">Save</button>
         </form>
       </div>

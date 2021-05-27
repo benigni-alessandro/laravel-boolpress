@@ -9,9 +9,10 @@
               <div class="card-header">{{ $post->title }}</div>
               <div class="card-body">
                 <p>{{ $post->content }}</p>
-                @if($post->category)
-                <p>Category:<a href="{{route('category.index', ['slug'=>$post->category->slug])}}">{{ $post->category->name }}</a> </p>
+                <p>Category: @if($post->category)
+                {{ $post->category->name }}
                 @endif
+                </p>
               </div>
           </div>
       </div>
