@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{route('guests.posts.index')}}">Posts</a>
+                    <a href="{{route('posts.index')}}">Posts</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
