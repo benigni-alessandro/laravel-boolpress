@@ -53,6 +53,18 @@
               <small class="text-danger">{{ $message }}</small>
             @enderror
           </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Tags</label>
+            <select type="text" class="form-control @error('tag') is-invalid @enderror" id="title" name="tag_ids[]" multiple>
+
+              @foreach($tags as $tag)
+                <option value="{{$tag->id}}" {{$post->tags->contains($tag) ? 'selected' : ''}}>{{$tag->name}}</option>
+              @endforeach
+            </select>
+            @error('name')
+              <small class="text-danger">{{ $message }}</small>
+            @enderror
+          </div>
           <button type="submit" name="button">Save</button>
         </form>
       </div>

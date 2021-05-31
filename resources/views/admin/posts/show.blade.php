@@ -11,6 +11,9 @@
             <div class="card-body">
               <h5 class="card-title">{{ $post->title }}</h5>
               <p class="card-text">{{ $post->content }}</p>
+              @foreach($post->tags as $tag )
+              <p class="card-text"><a href="{{route('tag.index', ['slug'=>$tag->slug])}}">#{{ $tag->name }}</a></p>
+              @endforeach
               <p class="card-text">Category: @if($post->category)
               {{ $post->category->name }}
               @endif</p>

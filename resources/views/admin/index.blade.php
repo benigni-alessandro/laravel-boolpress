@@ -20,6 +20,7 @@
         </div>
         <div class="col-md-8 justify-content-center" style="display: flex">
           <a href="{{route('admin.posts.index')}}">Your posts</a>
+          <a href="{{route('admin.tags.index')}}">Tags</a>
         </div>
         <div class="col-md-8">
           <h2>Invia email</h2>

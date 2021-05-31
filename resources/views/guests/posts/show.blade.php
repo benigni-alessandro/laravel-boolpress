@@ -10,8 +10,11 @@
             <div class="card-body">
               <h5 class="card-title">{{ $post->title }}</h5>
               <p class="card-text">{{ $post->content }}</p>
+              @foreach($post->tags as $tag)
+              <p class="card-text"><a href="{{route('tag.index', ['slug'=>$tag->slug])}}">#{{ $tag->name }}</a></p>
+              @endforeach
               @if($post->category)
-              <p>Category:<a href="{{route('category.index', ['slug'=>$post->category->slug])}}">{{ $post->category->name }}</a> </p>
+              <p>Category:<a href="{{route('category.index', ['slug'=>$post->category->slug])}}">{{ $post->category->name }}</a></p>
               @endif
             </div>
           </div>
